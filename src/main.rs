@@ -1,10 +1,12 @@
-mod exchange_counter;
-use exchange_counter::ExchangeCounter;
+mod coin_sums;
+use coin_sums::CoinSum;
 
 fn main() {
     println!("Calculation started");
 
-    let answer_p31: u128 = 0;
+    let cs = CoinSum::new(200, &[1,2,5,10,20,50,100,200]);
+    let answer_p31 = cs.number_of_possible_ways();
+
 
     println!(
         "The answer to problem 31 of project Euler is {}.",
